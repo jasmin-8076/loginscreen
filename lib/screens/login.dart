@@ -1,6 +1,11 @@
+
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:sampleflutterapp/screens/home.dart';
+
+
+// import 'package:flutter/src/widgets/framework.dart';
+
 
 class screenlogin extends StatelessWidget {
   screenlogin({super.key});
@@ -49,11 +54,12 @@ class screenlogin extends StatelessWidget {
     final username = usernamecontroller.text;
     final password = passwordcontroller.text;
     if (username == password) {
+      print('username and paswd matched');
+      Navigator.of(ctx)
+          .pushReplacement(MaterialPageRoute(builder: (ctx1) => screenhome()));
       // go to home
- 
+
     } else {
-      
-    
       // snackbar
       ScaffoldMessenger.of(ctx).showSnackBar(
         SnackBar(

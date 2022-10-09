@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/widgets.dart';
+// import 'package:flutter/src/widgets/container.dart';
+// import 'package:flutter/src/widgets/framework.dart';
+// import 'package:flutter/widgets.dart';
 import 'package:sampleflutterapp/screens/login.dart';
 
 class screensplash extends StatefulWidget {
@@ -48,7 +48,7 @@ class _screensplashState extends State<screensplash> {
 
   Future<void> gotologin() async {
     Future.delayed(Duration(seconds: 3));
-    Navigator.of(context).push(MaterialPageRoute(builder: (ctx) {
+    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (ctx) {
       return screenlogin();
     }));
   }
